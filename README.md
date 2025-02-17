@@ -5,6 +5,6 @@ Repository ini adalah tempat belajar bagi mahasiswa Program Studi Pendidikan Inf
 ## Lisensi
 Proyek ini dilisensikan di bawah Lisensi MIT - lihat file LICENSE untuk detail.
 
-the Department of Informatics Education
-Faculty of Teacher Training and Education
-Universitas Trunojoyo Madura
+```the Department of Informatics Education
+```Faculty of Teacher Training and Education
+```Universitas Trunojoyo Madura
