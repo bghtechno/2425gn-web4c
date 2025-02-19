@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Paragraf</title>
+    </head>
+    <body>
+        <h2>
+            <div align="center">
+                <b><div style="font-size: 40px;">TUGAS 1 : PEMBUATAN WEB SEDERHANA</div></b>
+                <b><div style="font-size: 40px;">BAHASA PEMROGRAMAN <i>HTML</i> ?</div></b>
+            </div>
+        </h2>
+        <div style="text-indent:1.27cm" align="justify">
+            HTML <s>adalah singkatan dari</s> (<i><b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguange</i>), yaitu bahasa
+            (aturan) standar yang digunakan untuk menampilkan teks, gambar, video, dan audio ke dalam halaman <i>tag</i>. <i>Tag</i>
+            HTML diapit dengan tanda lebih kecil (<) dan tanda lebih besar (>), misalnya: <b>&lt;html&gt;</b>, <b>&lt;head&gt;</b>, <b>&lt;body&gt;</b>, <b>&lt;b&gt;</b>, dan lain-lain.
+            HTML ada yang memiliki pasangan, ada juga yang tidak. Jika suatu <i>tag</i> memiliki pasangan, maka <i>tag</i> penutup
+            akan disertai dengan tanda <i>slash</i> (/), misalnya : <b>&lt;/html&gt;, &lt;/body&gt;, &lt;/p&gt;</b>, dan lain-lain.
+        </div>
+        <br/>
+        <div style="text-indent: 1.27cm" align="justify">
+            Dokumen atau <i>file</i> HTML dapat dibuat menggunakan aplikasi <i>text editor</i> apa saja dan disimpan
+            dengan ekstensi <b>.html</b> atau <b>.htm</b>. Untuk memudahkan proses belajar Anda, penulis merekomendasikan
+            agar Anda menggunakan <i>Text Editor</i> yang secara khusus dirancang untuk menulis kode-kode HTML.
+            Saat ini banyak <i>Software Text Editor</i> untuk HTML yang ditawarkan secara gratis di internet.
+        </div>
+        <br>
+        <b><u>Daftar Pustaka</u></b>
+        <br>
+        <ol>
+            <li><a href="http://elektronika-dasar.web.id/teori-electronika/prinsip-kerja-motor-dc/" target="_blank">http://elektronika-dasar.web.id/teori-electronika/prinsip-kerja-motor-dc/</a></li>
+            <li>Nurdiansyah, Ryan (2011) Perancangan dan Implementasi Sistem Absen menggunakan RFID, Bandung: Tugas Akhir</li>
+        </ol>
+        <br>
+        <div align="center" style="font-size: 35px; font-weight: bold; color: blue; margin-top: 30px;">
+            Ainul Yaqin [230631100096]
+        </div>
+        <marquee direction="left" behavior="alternate">
+            <marquee direction="down" behavior="alternate" style="font-size: 50px;color:red">
+                <b>Pendidikan Informatika - 4C</b>
+            </marquee>
+        </marquee>
+    </body>
+</html>
