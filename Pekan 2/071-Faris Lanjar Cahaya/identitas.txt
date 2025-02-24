@@ -1,3 +1,31 @@
 230631100071
 Faris Lanjar Cahaya
 4C
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apa Itu HTML?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-black font-serif">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-center text-3xl font-bold mb-4">Apa Itu <span class="italic">HTML</span> ?</h1>
+        <p class="text-justify mb-4">
+            HTML adalah singkatan dari <i>HyperText Markup Language</i>, yaitu bahasa (markup) standar yang digunakan untuk menampilkan teks, gambar, video dan audio ke dalam halaman web. HTML menyimpan file teks yang terstruktur dan secara default berekstensi <code>.html</code>. Tag HTML dapat dikenali dengan tanda kurung &lt; &gt;, misalnya <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, dan lain-lain.
+        </p>
+        <p class="text-justify mb-4">
+            Dokumen atau file HTML dapat dibuat menggunakan aplikasi <i>Text Editor</i> apa saja, dan disimpan dengan ekstensi .html atau .htm. Untuk memudahkan proses belajar Anda, penulis merekomendasikan agar Anda menggunakan <i>Text Editor</i> yang khusus dirancang untuk menulis kode-kode HTML.
+        </p>
+        <div class="text-center mb-4">
+            <p class="text-lg mb-2"><strong>Nama:</strong> FARIS LANJAR CAHAYA</p>
+            <p class="text-lg mb-2"><strong>NIM:</strong> 230631100071</p>
+            <p class="text-lg mb-2"><strong>Kelas:</strong> 4C</p>
+            <p class="text-lg mb-2"><strong>Matkul:</strong> Kewarganegaraan</p>
+        </div>
+        <h1 class="text-center text-4xl font-bold text-red-600">TUGAS PERTAMAKU</h1>
+    </div>
+</body>
+</html>
