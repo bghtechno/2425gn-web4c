@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paragraf</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            border: 3px solid #ff5e62;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h2 {
+            text-align: center;
+            color: #ff5e62;
+        }
+        .content {
+            text-indent: 1.27cm;
+            text-align: justify;
+            padding: 10px;
+            line-height: 1.6;
+        }
+        .title {
+            font-size: 48px;
+            color: #ff5e62;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        .highlight-text {
+            font-size: 36px;
+            font-weight: bold;
+            color: gray;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Apa Itu <i>HTML</i> ?</div>
+        
+        <div class="content">
+            HTML <b><i>adalah singkatan dari </i>(<b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguage</i>), yaitu bahasa 
+            (aturan) standar yang digunakan untuk menampilkan teks, gambar, video dan audio ke dalam halaman <i>web</i>. 
+            HTML merupakan <i>file</i> teks yang tersusun atas elemen-elemen yang disebut dengan <i>tag</i>. 
+            <i>Tag</i> HTML dikapit dengan tanda lebih kecil (<) dan tanda lebih besar (>), misalnya: 
+            <b>&lt;html&gt;, &lt;head&gt;, &lt;body&gt;, &lt;p&gt;</b>, dan lain-lain. 
+            <i>HTML</i> ada yang memiliki pasangan, ada juga yang tidak. Jika suatu <i>tag</i> memiliki pasangan, maka <i>tag</i> penutup 
+            akan disertai dengan tanda <i>slash</i> (/), misalnya: 
+            <b>&lt;/html&gt;, &lt;/head&gt;, &lt;/body&gt;, &lt;/p&gt;</b>, dan lain-lain.
+        </div>
+        
+        <div class="content">
+            HTML digunakan oleh peramban (<i>browser</i>) untuk menampilkan konten dalam bentuk teks, gambar, video, dan elemen lain 
+            di dalam sebuah halaman web. Setiap halaman web yang Anda lihat di internet ditulis dengan menggunakan HTML, 
+            yang kemudian dapat diperindah dengan CSS dan dibuat lebih interaktif dengan JavaScript.
+        </div>
+        
+        <div class="highlight-text">094 - Mohammad Yesin</div>
+    </div>
+</body>
+</html>
