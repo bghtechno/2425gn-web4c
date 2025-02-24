@@ -33,7 +33,7 @@
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
             max-width: 800px;
-            border: 2px solid #ff5e62;
+            border: 2px solid #0671eb;
             animation: fadeIn 1.5s ease-in-out;
         }
 
@@ -43,7 +43,7 @@
         }
 
         h1 {
-            color: #ff5e62;
+            color: #0590f4;
             font-size: 38px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
@@ -59,7 +59,7 @@
         .highlight-text {
             font-size: 26px;
             font-weight: bold;
-            color: #ff4757;
+            color: #0285f8;
             text-align: center;
             margin-top: 20px;
         }
@@ -67,37 +67,37 @@
         .author {
             font-size: 20px;
             font-weight: bold;
-            color: #2ed573;
+            color: #011a0b;
             margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🔥 Waktunya Kuasai HTML & Bangun Website Kerenmu! 🌍</h1>
+        <h1>Waktunya Kuasai HTML & Bangun Website Kerenmu!</h1>
         
         <div class="content">
-            🚀 Pernah penasaran bagaimana website dibuat?  
-            HTML (HyperText Markup Language) adalah *kunci utama* yang membuka pintu dunia web!  
+             Pernah penasaran bagaimana website dibuat?  
+            HTML (HyperText Markup Language) adalah kunci utama yang membuka pintu dunia web!  
             Dengan HTML, kamu bisa menciptakan website dari nol dan mewujudkan ide-ide kreatifmu!  
         </div>
 
         <div class="content">
-            Tidak hanya itu, HTML juga bekerja sama dengan *CSS untuk desain* dan *JavaScript untuk interaktivitas*, 
-            membuat website lebih menarik dan dinamis. *Bayangkan bisa membuat situs web sendiri dalam hitungan jam!*  
+            Tidak hanya itu, HTML juga bekerja sama dengan CSS untuk desain dan JavaScript untuk interaktivitas, 
+            membuat website lebih menarik dan dinamis. Bayangkan bisa membuat situs web sendiri dalam hitungan jam!  
         </div>
 
-        <h2>💡 Kenapa Harus Belajar HTML?</h2>
+        <h2> Kenapa Harus Belajar HTML?</h2>
         <div class="content">
-            ✅ *Mudah & Cepat Dipelajari!*<br>
-            ✅ *Dasar Utama Semua Website di Internet!*<br>
-            ✅ *Berguna untuk Blog, Portofolio, hingga Bisnis Online!*<br>
-            ✅ *Pintu Gerbang Menjadi Web Developer Profesional!*<br>
+            ✅ Mudah & Cepat Dipelajari!<br>
+            ✅ Dasar Utama Semua Website di Internet!<br>
+            ✅ Berguna untuk Blog, Portofolio, hingga Bisnis Online!<br>
+            ✅ Pintu Gerbang Menjadi Web Developer Profesional!<br>
         </div>
 
-        <div class="highlight-text">💡 Jangan hanya jadi pengguna! Saatnya kamu *membuat* website sendiri! 🚀</div>
+        <div class="highlight-text"> Jangan hanya jadi pengguna! Saatnya kamu membuat website sendiri! </div>
         
-        <div class="author">077-Mutmainnah</div>
+        <div class="author">077_Mutmainnah</div>
     </div>
 </body>
 </html>
