@@ -1,1 +1,58 @@
-
+<!DOCTYPE html>
+<html>
+    <body>
+        <table border=5 align="center">
+            <caption><h2><b>DATA MAHASISWA UNIVERSITAS TRUNOJOYO MADURA</b></h2></caption>
+            <thead>
+                <tr>
+                    <td rowspan="2" align="center" valign="middle">NO</td>
+                    <td rowspan="2" align="center" valign="middle">NAMA</td>
+                    <td rowspan="2" align="center" valign="middle">NIM</td>
+                    <td rowspan="2" align="center" valign="middle">PROGRAM STUDI</td>
+                    <td rowspan="2" align="center" valign="middle">FAKULTAS</td>
+                    <td rowspan="2" align="center" valign="middle">ANGKATAN</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="center" valign="middle">1</td>
+                    <td align="center" valign="middle">Eliza Kurnia</td>
+                    <td align="center" valign="middle">230631100035</td>
+                    <td align="center" valign="middle">Ilmu Komunikasi</td>
+                    <td align="center" valign="middle">Fakultas Ilmu Sosial & Ilmu Budaya</td>
+                    <td align="center" valign="middle">2023</td>
+                </tr>
+                <tr>
+                    <td align="center" valign="middle">2</td>
+                    <td align="center" valign="middle">Ainul Yaqin</td>
+                    <td align="center" valign="middle">230631100096</td>
+                    <td align="center" valign="middle">Pendidikan Informatika</td>
+                    <td align="center" valign="middle">Fakultas Keguruan & Ilmu Pendidikan</td>
+                    <td align="center" valign="middle">2023</td>
+                </tr>
+                <tr>
+                    <td align="center" valign="middle">3</td>
+                    <td align="center" valign="middle">Moh. Javier Nindis</td>
+                    <td align="center" valign="middle">230631100011</td>
+                    <td align="center" valign="middle">Teknik Informatika</td>
+                    <td align="center" valign="middle">Fakultas Teknik</td>
+                    <td align="center" valign="middle">2024</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 align="center">Input Data Mahasiswa</h2>
+        <form align="center">
+            <label>Nama:</label>
+            <input type="text" name="nama" required><br><br>
+            <label>NIM:</label>
+            <input type="text" name="nim" required><br><br>
+            <label>Program Studi:</label>
+            <input type="text" name="prodi" required><br><br>
+            <label>Fakultas:</label>
+            <input type="text" name="fakultas" required><br><br>
+            <label>Angkatan:</label>
+            <input type="number" name="angkatan" required><br><br>
+            <button type="submit">Tambah Data</button>
+        </form>
+    </body>
+</html>
