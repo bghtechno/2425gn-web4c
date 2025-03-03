@@ -29,8 +29,8 @@
         </tr>
         <tr>
             <td>1</td>
-            <td>Keluarga Santoso</td>
-            <td>Joko Santoso</td>
+            <td>Keluarga Santosa</td>
+            <td>Joko Santosa</td>
             <td>5</td>
         </tr>
         <tr>
