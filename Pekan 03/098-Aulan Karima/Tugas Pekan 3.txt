@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Mahasiswa Pendidikan Informatika</title>
+</head>
+<body align="center">
+    <h2>Form Data Mahasiswa Pendidikan Informatika</h2>
+    <form>
+        <label for="nim">NIM:</label>
+        <input type="text" name="nim" required><br><br>
+        
+        <label for="nama">Nama:</label>
+        <input type="text" name="nama" required><br><br>
+        
+        <label for="kelas">Kelas:</label>
+        <input type="text" name="kelas" required><br><br>
+        
+        <label for="angkatan">Angkatan:</label>
+        <select name="angkatan">
+            <option selected>- Pilih Angkatan -</option>
+            <option>2021</option>
+            <option>2022</option>
+            <option>2023</option>
+            <option>2024</option>
+        </select><br><br>
+        
+        <input type="submit" value="Simpan Data">
+    </form>
+    
+    <br><br>
+    <h2>Data Mahasiswa Pendidikan Informatika</h2>
+    <table border="1" align="center">
+        <tr>
+            <th>No</th>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Kelas</th>
+            <th>Angkatan</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>230631100098</td>
+            <td>Aulan Karima</td>
+            <td>4C</td>
+            <td>2023</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>220631100056</td>
+            <td>Bella Putri Delima</td>
+            <td>6B</td>
+            <td>2023</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>240631100056</td>
+            <td>Argantara Fero</td>
+            <td></td>
+            <td>2022</td>
+        </tr>
+    </table>
+</body>
+</html>
