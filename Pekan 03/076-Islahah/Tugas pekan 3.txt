@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Keluarga</title>
+</head>
+<body align="center">
+    <h2>Form Data Keluarga</h2>
+    <form>
+        <label for="nama_keluarga">Nama Keluarga:</label>
+        <input type="text" name="nama_keluarga" required><br><br>
+        
+        <label for="kepala_keluarga">Kepala Keluarga:</label>
+        <input type="text" name="kepala_keluarga" required><br><br>
+        
+        <label for="jumlah_anggota">Jumlah Anggota:</label>
+        <input type="number" name="jumlah_anggota" required><br><br>
+        
+        <input type="submit" value="Simpan Data">
+    </form>
+    
+    <br><br>
+    <h2>Data Keluarga</h2>
+    <table border="1" align="center">
+        <tr>
+            <th>No</th>
+            <th>Nama Keluarga</th>
+            <th>Kepala Keluarga</th>
+            <th>Jumlah Anggota</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Keluarga Santoso</td>
+            <td>Joko Santoso</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Keluarga Aminah</td>
+            <td>Siti Aminah</td>
+            <td>4</td>
+        </tr>
+    </table>
+</body>
+</html>
