@@ -5,72 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEAGAMES Membership</title>
     <style>
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #1a1a2e;
-            color: white;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: black;
             text-align: center;
             margin: 0;
             padding: 20px;
         }
         h1 {
-            color: #f8b400;
+            color: black;
             text-transform: uppercase;
-            animation: fadeIn 1s ease-in-out;
         }
         nav {
-            background: #16213e;
+            background: #ccc;
             padding: 10px;
             margin-bottom: 20px;
-            animation: fadeIn 1.5s ease-in-out;
         }
         nav a {
-            color: #f8b400;
+            color: black;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
             display: inline-block;
-            animation: bounce 2s infinite;
         }
         table {
             width: 60%;
             margin: 20px auto;
             border-collapse: collapse;
-            background: #16213e;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-            color: white;
+            background: #eee;
+            color: black;
             border-radius: 10px;
             overflow: hidden;
-            animation: fadeIn 2s ease-in-out;
         }
         th, td {
             padding: 15px;
-            border: 1px solid #f8b400;
+            border: 1px solid black;
         }
         th {
-            background: #f8b400;
-            color: black;
+            background: #ccc;
         }
         tr:nth-child(even) {
-            background: #0f3460;
+            background: #ddd;
         }
         form {
-            background: #16213e;
+            background: #eee;
             padding: 30px;
             display: inline-block;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-            animation: fadeIn 2.5s ease-in-out;
         }
         input, select, button {
             margin: 10px 0;
@@ -84,15 +66,14 @@
             color: black;
         }
         button {
-            background: #f8b400;
+            background: #ccc;
             color: black;
             font-weight: bold;
             cursor: pointer;
             text-transform: uppercase;
-            animation: bounce 2s infinite;
         }
         button:hover {
-            background: #ffcc00;
+            background: #aaa;
         }
     </style>
 </head>
