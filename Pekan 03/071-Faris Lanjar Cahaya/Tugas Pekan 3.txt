@@ -1,1 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEAGAMES Membership</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a2e;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #f8b400;
+            text-transform: uppercase;
+            animation: fadeIn 1s ease-in-out;
+        }
+        nav {
+            background: #16213e;
+            padding: 10px;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        nav a {
+            color: #f8b400;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: #16213e;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            animation: fadeIn 2s ease-in-out;
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #f8b400;
+        }
+        th {
+            background: #f8b400;
+            color: black;
+        }
+        tr:nth-child(even) {
+            background: #0f3460;
+        }
+        form {
+            background: #16213e;
+            padding: 30px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            animation: fadeIn 2.5s ease-in-out;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 12px;
+            width: 85%;
+            border: none;
+            border-radius: 5px;
+        }
+        input, select {
+            background: white;
+            color: black;
+        }
+        button {
+            background: #f8b400;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            animation: bounce 2s infinite;
+        }
+        button:hover {
+            background: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="#form">Lanjutkan</a>
+        <a href="#" onclick="history.back()">Kembali</a>
+    </nav>
+    
+    <h1>Ajang Bergengsi <i>#SEAGAMES</i></h1>
+    <table id="memberTable">
+        <tr>
+            <th rowspan="2">No</th>
+            <th colspan="2">Jenis Kelamin</th>
+            <th rowspan="2">Nama Lengkap</th>
+        </tr>
+        <tr>
+            <th>L</th>
+            <th>P</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>✔</td>
+            <td></td>
+            <td>Faris Lanjar Cahaya</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td></td>
+            <td>✔</td>
+            <td>Nur Komariyah</td>
+        </tr>
+    </table>
+    
+    <h1 id="form">Form Pendaftaran <i>#WeAreChampions</i></h1>
+    <form id="registrationForm">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+        <br>
+        <label for="jenis_kelamin">Jenis Kelamin</label>
+        <select id="jenis_kelamin" name="jenis_kelamin" required>
+            <option value="L">Laki-Laki</option>
+            <option value="P">Perempuan</option>
+        </select>
+        <br>
+        <button type="button" onclick="addMember()">Daftar Sekarang</button>
+        <button type="button" onclick="resetTable()">Reset Data</button>
+    </form>
+
+    <script>
+        function addMember() {
+            var table = document.getElementById("memberTable");
+            var nama = document.getElementById("nama").value.trim();
+            var gender = document.getElementById("jenis_kelamin").value;
+            
+            if (!nama) {
+                alert("Nama tidak boleh kosong!");
+                return;
+            }
+            
+            for (var i = 2; i < table.rows.length; i++) {
+                if (table.rows[i].cells[3].innerText === nama) {
+                    alert("Nama sudah terdaftar!");
+                    return;
+                }
+            }
+            
+            var rowCount = table.rows.length;
+            var row = table.insertRow(rowCount);
+            
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            
+            cell1.innerHTML = rowCount - 1;
+            cell2.innerHTML = gender === "L" ? "✔" : "";
+            cell3.innerHTML = gender === "P" ? "✔" : "";
+            cell4.innerHTML = nama;
+            
+            document.getElementById("registrationForm").reset();
+        }
+        
+        function resetTable() {
+            var table = document.getElementById("memberTable");
+            while (table.rows.length > 2) {
+                table.deleteRow(2);
+            }
+        }
+    </script>
+</body>
+</html>
