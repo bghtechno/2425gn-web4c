@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website ROY</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #07a02b;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ffffff;
+        }
+        th {
+            background-color: #08deff;
+        }
+        .nav-link {
+            margin: 5px 0;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>WELCOME TO WEBSITE </h1>
+
+    <div id="formSection">
+        <h2>Form Input Data</h2>
+        <form id="dataForm">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" required><br><br>
+
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" required></textarea><br><br>
+
+            <label for="kota">Kota:</label>
+            <select id="kota" required>
+                <option value="Bangkalan">Bangkalan</option>
+                <option value="Pamekasan">Pamekasan</option>
+                <option value="Sampang">Sampang</option>
+                <option value="Sumenep">Sumenep</option>
+            </select><br><br>
+
+            <input type="submit" value="Kirimkan Data">
+        </form>
+    </div>
+
+    <div id="dataSection">
+        <h2>Hasil Data yang Sudah Dimasukkan:</h2>
+        <table border="1" id="dataTable">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Kota</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.getElementById("dataForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            var nama = document.getElementById("nama").value;
+            var alamat = document.getElementById("alamat").value;
+            var kota = document.getElementById("kota").value;
+            
+            var table = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
+            var newRow = table.insertRow();
+
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+
+            cell1.innerHTML = nama;
+            cell2.innerHTML = alamat;
+            cell3.innerHTML = kota;
+
+            document.getElementById("dataForm").reset();
+        });
+    </script>
+
+</body>
+</html>
