@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Mahasiswa</title>
+    </head>
+    <body align="center">
+        <h2>Data Mahasiswa</h2>
+        <table border="1" align="center" width="50%" cellpadding="10">
+            <tr>
+                <th>No</th>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Program Studi</th>
+                <th>Fakultas</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>230631100072</td>
+                <td>Liizza Elvira Engela</td>
+                <td>Lamongan</td>
+                <td>Pendidikan Informatika</td>
+                <td>FKIP</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>22780000815</td>
+                <td>Kalamoi</td>
+                <td>Korea</td>
+                <td>Seni Rupa</td>
+                <td>FBS</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td></td>
+                <td>Muhammad Afif Efendi</td>
+                <td>Kamal</td>
+                <td>Pendidikan Informatika</td>
+                <td>FKIP</td>
+            </tr>
+        </table>
+        
+        <h2>Input Data Mahasiswa</h2>
+        <form>
+            <label for="nim">NIM</label><br>
+            <input type="text" name="nim" style="width: 300px;"><br><br>
+            
+            <label for="nama">Nama</label><br>
+            <input type="text" name="nama" style="width: 300px;"><br><br>
+            
+            <label for="alamat">Alamat</label><br>
+            <textarea name="alamat" rows="4" style="width: 300px;"></textarea><br><br>
+            
+            <label for="program_studi">Program Studi</label><br>
+            <select name="program_studi" style="width: 300px;">
+                <option selected>- Pilih Program Studi -</option>
+                <option>Pendidikan Informatika</option>
+                <option>Sastra Inggris</option>
+                <option>Fisika</option>
+                <option>Seni Rupa</option>
+            </select><br><br>
+            
+            <label for="fakultas">Fakultas</label><br>
+            <select name="fakultas" style="width: 300px;">
+                <option selected>- Pilih Fakultas -</option>
+                <option>FKIP</option>
+                <option>FISIB</option>
+                <option>FMIPA</option>
+                <option>FBS</option>
+            </select><br><br>
+            
+            <input type="submit" value="Input" style="width: 300px;">
+        </form>
+    </body>
+</html>
 
