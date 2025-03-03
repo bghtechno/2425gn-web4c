@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Adam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: inline-block;
+            text-align: left;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang di Website Adam</h1>
+    <a href="latihan3.html">Buka Latihan 1</a>
+    <a href="latihan2.html">Buka Latihan 2</a>
+
+    <h2>Form Input Data</h2>
+    <form id="dataForm">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" required><br>
+
+        <label for="alamat">Alamat:</label>
+        <textarea id="alamat" required></textarea><br>
+
+        <label for="kota">Kota:</label>
+        <select id="kota" required>
+            <option value="Sumeneb">Sumeneb</option>
+            <option value="Pamekasan">Pamekasan</option>
+            <option value="Sampang">Sampang</option>
+            <option value="Bangkalan">Bangkalan</option>
+        </select><br>
+
+        <input type="submit" value="Kirimkan Data">
+    </form>
+
+    <h2>Hasil Data yang Sudah Dimasukkan:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Kota</th>
+            </tr>
+        </thead>
+        <tbody id="dataTableBody">
+        </tbody>
+    </table>
+
+    <p>Klik di bawah ini untuk berpindah ke halaman utama :</p>
+    <a href="latihan1.html">Kembali ke Halaman Utama</a>
+
+    <script>
+        document.getElementById("dataForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            var nama = document.getElementById("nama").value;
+            var alamat = document.getElementById("alamat").value;
+            var kota = document.getElementById("kota").value;
+            
+            var tableBody = document.getElementById("dataTableBody");
+            var newRow = tableBody.insertRow();
+
+            newRow.insertCell(0).innerHTML = nama;
+            newRow.insertCell(1).innerHTML = alamat;
+            newRow.insertCell(2).innerHTML = kota;
+
+            document.getElementById("dataForm").reset();
+        });
+    </script>
+</body>
+</html>
