@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Organisasi Mahasiswa</title>
+</head>
+<body align="center">
+    <h2>Form Data Matakuliah</h2>
+    <form>
+        <label for="kode_matakuliah">kode_matakuliah:</label>
+        <input type="text" name="kode_matakuliah" required><br><br>
+        
+        <label for="nama_matakuliah">nama_matakuliah:</label>
+        <input type="text" name="ketua" required><br><br>
+        
+        <label for="sks">sks:</label>
+        <input type="number" name="jumlah_sks" required><br><br>
+        
+        <label for="semester">semester:</label>
+        <input type="text" name="semester" required><br><br>
+        
+        <input type="submit" value="Simpan Data">
+    </form>
+    
+    <br><br>
+    <h2>Data Matakuliah</h2>
+    <table border="1" align="center">
+        <tr>
+            <th>No</th>
+            <th>kode_matakuliah</th>
+            <th>nama_matakuliah</th>
+            <th>jumlah_sks</th>
+            <th>semester</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>MKU101</td>
+            <td>Pengantar Ilmu Komputer</td>
+            <td>3</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>MKU102</td>
+            <td>MTK Diskrit</td>
+            <td>2</td>
+            <td>2</td>
+        </tr>
+    </table>
+</body>
+</html>
