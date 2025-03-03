@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Data Mahasiswa Pendidikan Informatika</title>
@@ -55,7 +54,7 @@
             <td>2</td>
             <td>240631100056</td>
             <td>Argantara Fero</td>
-            <td></td>
+            <td>1A</td>
             <td>2022</td>
         </tr>
     </table>
