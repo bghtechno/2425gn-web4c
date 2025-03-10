@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background-color: #FFC1CC;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 300px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+        input[type="submit"] {
+            background-color: #A94064;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+        th {
+            background-color: #A94064;
+            color: white;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <h1>DATA PRIBADI</h1>
+    <form>
+        <label for="nim">NIM</label>
+        <input type="text" name="nim"><br>
+
+        <label for="nama">Nama</label>
+        <input type="text" name="nama"><br>
+
+        <label for="alamat">Alamat</label>
+        <textarea name="alamat"></textarea><br>
+
+        <label for="kota">Kota</label>
+        <select name="kota">
+            <option selected>- Pilih Kota -</option>
+            <option>Gresik</option>
+            <option>Surabaya</option>
+            <option>Lamongan</option>
+            <option>Bangkalan</option>
+        </select>
+
+        <input type="submit" value="Input">
+    </form>
+
+    <table>
+        <tr>
+            <th>No</th>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Alamat</th>
+            <th>Kota</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>230631100070</td>
+            <td>Atina Alya Mahirah</td>
+            <td>Randuboto</td>
+            <td>Gresik</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td></td>
+            <td>Muhammad Afif Efendi</td>
+            <td>Kamal</td>
+            <td>Bangkalan</td>
+        </tr>
+    </table>
+</body>
+</html>
 
