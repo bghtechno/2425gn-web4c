@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Keluarga</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            margin: 20px auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Data Keluarga</h2>
+    <form>
+        <label for="nama_keluarga">Nama Keluarga:</label>
+        <input type="text" name="nama_keluarga" required><br><br>
+
+        <label for="kepala_keluarga">Kepala Keluarga:</label>
+        <input type="text" name="kepala_keluarga" required><br><br>
+
+        <label for="jumlah_anggota">Jumlah Anggota:</label>
+        <input type="number" name="jumlah_anggota" required><br><br>
+
+        <input type="submit" value="Simpan Data">
+    </form>
+
+    <h2>Data Keluarga</h2>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Nama Keluarga</th>
+            <th>Kepala Keluarga</th>
+            <th>Jumlah Anggota</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Keluarga Santoso</td>
+            <td>Joko Santoso</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Keluarga Aminah</td>
+            <td>Siti Aminah</td>
+            <td>4</td>
+        </tr>
+    </table>
+</body>
+</html>
