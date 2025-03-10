@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Mahrus Ali</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: url('https://marketplace.canva.com/EAFM2Aq_f0A/1/0/1600w/canva-black-white-gray-modern-geometric-corporate-zoom-virtual-background-4JUw_UBMD1c.jpg');
+            background-size: cover; 
+            color: #ffffff;
+            padding: 50px;
+        }
+
+        h1, h2 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #2b06ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(62, 255, 36, 0.3);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        a:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #374151;
+        }
+
+        th {
+            background-color: #3b82f6;
+            color: white;
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+            background-color: #4b5563;
+            color: #f3f4f6;
+            transition: background-color 0.3s;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #374151;
+        }
+
+        tr:hover td {
+            background-color: #475569;
+        }
+
+        input, select, textarea {
+            width: 90%;
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+            background-color: #ffffff;
+            color: #000000;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+        }
+
+        input[type="submit"] {
+            background-color: #3b82f6;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2563eb;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Selamat Datang di Website Mahrus Ali</h1>
+    <a href="latihan3.html">Buka Latihan 1</a>
+    <a href="latihan2.html">Buka Latihan 2</a>
+    <a href="latihan4.html">Buka Latihan 3</a>
+    <a href="latihan5.html">Buka Latihan 4</a>
+    <h2>Silahkan Masukan Data Diri Anda</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Kota</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="dataTableBody">
+            <tr>
+                <td colspan="4">
+                    <form id="dataForm">
+                        <input type="text" id="nama" placeholder="Nama" required>
+                        <textarea id="alamat" placeholder="Alamat" required></textarea>
+                        <select id="kota" required>
+                            <option value="">Pilih Kota</option>
+                            <option value="Pamekasan">Pamekasan</option>
+                            <option value="Sampang">Sampang</option>
+                            <option value="Bangkalan">Bangkalan</option>
+                        </select>
+                        <br>
+                        <input type="submit" value="Kirimkan Data">
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Klik di bawah ini untuk berpindah ke halaman utama :</p>
+    <a href="latihan1.html">kembali ke tampilan awal</a>
+
+    <script>
+        document.getElementById("dataForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var nama = document.getElementById("nama").value;
+            var alamat = document.getElementById("alamat").value;
+            var kota = document.getElementById("kota").value;
+
+            var tableBody = document.getElementById("dataTableBody");
+            var newRow = tableBody.insertRow(-1);
+
+            newRow.innerHTML = `
+                <td>${nama}</td>
+                <td>${alamat}</td>
+                <td>${kota}</td>
+                <td><button onclick="hapusBaris(this)">Hapus</button></td>
+            `;
+
+            document.getElementById("dataForm").reset();
+        });
+
+        function hapusBaris(button) {
+            var row = button.parentElement.parentElement;
+            row.remove();
+        }
+    </script>
+</body>
+
+</html>
