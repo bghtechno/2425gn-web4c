@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Matakuliah</title>
+    <style>
+        /* Reset margin dan padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gaya umum untuk body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #87CEEB; /* Warna biru langit */
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Container utama */
+        .container {
+            background-color: white;
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        /* Gaya untuk form */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            align-self: flex-start;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #574caf;
+            color: white;
+            padding: 12px;
+            margin-top: 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4645a0;
+        }
+
+        /* Gaya untuk tabel */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4c4faf;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        /* Responsif untuk layar kecil */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            input[type="text"],
+            input[type="number"],
+            input[type="submit"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Form Data Matakuliah</h2>
+        <form>
+            <label for="kode_matakuliah">Kode Matakuliah:</label>
+            <input type="text" id="kode_matakuliah" name="kode_matakuliah" required>
+
+            <label for="nama_matakuliah">Nama Matakuliah:</label>
+            <input type="text" id="nama_matakuliah" name="nama_matakuliah" required>
+
+            <label for="sks">Jumlah SKS:</label>
+            <input type="number" id="sks" name="jumlah_sks" required>
+
+            <label for="semester">Semester:</label>
+            <input type="text" id="semester" name="semester" required>
+
+            <input type="submit" value="Simpan Data">
+        </form>
+
+        <h2>Data Matakuliah</h2>
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Kode Matakuliah</th>
+                <th>Nama Matakuliah</th>
+                <th>Jumlah SKS</th>
+                <th>Semester</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>MKU101</td>
+                <td>Pengantar Ilmu Komputer</td>
+                <td>3</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>MKU102</td>
+                <td>MTK Diskrit</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
