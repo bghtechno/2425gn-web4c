@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Rumah Sakit</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #87CEFA, #E0FFFF); /* Gradien biru langit ke putih */
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 60%;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #4682B4; /* Biru tua */
+            color: white;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 10px;
+            width: 50%;
+            margin-top: 5px;
+            border: 1px solid #87CEFA;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #1E90FF; /* Biru terang */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #00BFFF; /* Variasi biru */
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Data Rumah Sakit</h2>
+    <form>
+        <label for="nama_Rumah Sakit">Nama Rumah Sakit:</label><br>
+        <input type="text" name="nama_Rumah Sakit" required><br><br>
+        
+        <label for="ketua">Dokter:</label><br>
+        <input type="text" name="Dokter" required><br><br>
+        
+        <label for="jumlah_pasien">Jumlah pasien:</label><br>
+        <input type="number" name="jumlah_pasien" required><br><br>
+        
+        <label for="menginap">lama menginap:</label><br>
+        <input type="text" name="menginap" required><br><br>
+        
+        <input type="submit" value="Simpan Data">
+    </form>
+    
+    <br><br>
+    <h2>Data Rumah Sakit</h2>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Nama Rumah Sakit</th>
+            <th>Dokter</th>
+            <th>Jumlah Pasien</th>
+            <th>lama menginap</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>puskesmas Tejo</td>
+            <td>Amelia Rohmatika</td>
+            <td>50</td>
+            <td>15/17</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>puskesmas sumenep</td>
+            <td>Ananda Olga</td>
+            <td>80</td>
+            <td>21/20</td>
+        </tr>
+    </table>
+</body>
+</html>
