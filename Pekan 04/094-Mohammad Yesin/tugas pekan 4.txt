@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website yesin</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: url('https://inspirationseek.com/wp-content/uploads/2016/03/Hitman-Wallpaper-HD.png') ;
+            background-size : cover;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: rgb(255, 0, 0);
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+        }
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 24px;
+            background: #ff1500;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            border-radius: 25px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+        a:hover {
+            background: #ae0101;
+            transform: scale(1.1);
+        }
+        form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            text-align: left;
+            max-width: 400px;
+            width: 100%;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        input[type="submit"] {
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        input[type="submit"]:hover {
+            background: #218838;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background: #ff1500;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang di Website yesin </h1>
+    <a href="latihan3.html">Buka Latihan 1</a>
+    <a href="latihan2.html">Buka Latihan 2</a>
+
+    <h2>Form Input Data</h2>
+    <form id="dataForm">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" required><br>
+
+        <label for="alamat">Alamat:</label>
+        <textarea id="alamat" required></textarea><br>
+
+        <label for="kota">Kota:</label>
+        <select id="kota" required>
+            <option value="Sumeneb">Sumeneb</option>
+            <option value="Pamekasan">Pamekasan</option>
+            <option value="Sampang">Sampang</option>
+            <option value="Bangkalan">Bangkalan</option>
+        </select><br>
+
+        <input type="submit" value="Kirimkan Data">
+    </form>
+
+    <h2>Hasil Data yang Sudah Dimasukkan:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Kota</th>
+            </tr>
+        </thead>
+        <tbody id="dataTableBody">
+        </tbody>
+    </table>
+
+    <a>Klik di bawah ini untuk berpindah ke halaman utama :</a>
+    <a href="latihan1.html">Kembali ke Halaman Utama</a>
+
+    <script>
+        document.getElementById("dataForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            var nama = document.getElementById("nama").value;
+            var alamat = document.getElementById("alamat").value;
+            var kota = document.getElementById("kota").value;
+            
+            var tableBody = document.getElementById("dataTableBody");
+            var newRow = tableBody.insertRow();
+
+            newRow.insertCell(0).innerHTML = nama;
+            newRow.insertCell(1).innerHTML = alamat;
+            newRow.insertCell(2).innerHTML = kota;
+
+            document.getElementById("dataForm").reset();
+        });
+    </script>
+</body>
+</html>
