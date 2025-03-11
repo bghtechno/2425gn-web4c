@@ -1,1 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pribadi & SEAGAMES Membership</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #add8e6;
+        }
+        h1 {
+            color: black;
+            text-transform: uppercase;
+        }
+        .form-container, .membership-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            margin: auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #4682b4;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            border: none;
+        }
+        button:hover {
+            background: #4169e1;
+        }
+        nav {
+            background: #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: #eee;
+            color: black;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid black;
+        }
+        th {
+            background: #ccc;
+        }
+        tr:nth-child(even) {
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#form">Lanjutkan</a>
+        <a href="#" onclick="history.back()">Kembali</a>
+    </nav>
+
+    <h1>Data Pribadi</h1>
+    <div class="form-container">
+        <label for="nim">NIM</label>
+        <input type="text" id="nim" name="nim" placeholder="Masukkan NIM" required>
+        
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan Nama" required>
+        
+        <label for="alamat">Alamat</label>
+        <textarea id="alamat" name="alamat" placeholder="Masukkan Alamat" required></textarea>
+        
+        <label for="kota">Kota</label>
+        <select id="kota" name="kota" required>
+            <option value="">- Pilih Kota -</option>
+            <option value="Jakarta">Jakarta</option>
+            <option value="Bandung">Bandung</option>
+            <option value="Surabaya">Surabaya</option>
+            <option value="Yogyakarta">Yogyakarta</option>
+        </select>
+        
+        <button type="button" onclick="showResult()">Input</button>
+    </div>
+
+    <div class="membership-container">
+        <h1>Hasil Input</h1>
+        <p id="result"></p>
+        <button onclick="resetForm()">Reset</button>
+    </div>
+
+    <h1>Ajang Bergengsi <i>#SEAGAMES</i></h1>
+    <table id="memberTable">
+        <tr>
+            <th rowspan="2">No</th>
+            <th colspan="2">Jenis Kelamin</th>
+            <th rowspan="2">Nama Lengkap</th>
+        </tr>
+        <tr>
+            <th>L</th>
+            <th>P</th>
+        </tr>
+    </table>
+
+    <h1 id="form">Form Pendaftaran <i>#WeAreChampions</i></h1>
+    <form id="registrationForm">
+        <label for="memberNama">Nama Lengkap</label>
+        <input type="text" id="memberNama" name="memberNama" placeholder="Masukkan nama lengkap" required>
+        <br>
+        <label for="jenis_kelamin">Jenis Kelamin</label>
+        <select id="jenis_kelamin" name="jenis_kelamin" required>
+            <option value="L">Laki-Laki</option>
+            <option value="P">Perempuan</option>
+        </select>
+        <br>
+        <button type="button" onclick="addMember()">Daftar Sekarang</button>
+        <button type="button" onclick="resetTable()">Reset Data</button>
+    </form>
+
+    <script>
+        function showResult() {
+            var nim = document.getElementById("nim").value;
+            var nama = document.getElementById("nama").value;
+            var alamat = document.getElementById("alamat").value;
+            var kota = document.getElementById("kota").value;
+
+            if (nim && nama && alamat && kota) {
+                document.getElementById("result").innerHTML =
+                    "<strong>NIM:</strong> " + nim + "<br>" +
+                    "<strong>Nama:</strong> " + nama + "<br>" +
+                    "<strong>Alamat:</strong> " + alamat + "<br>" +
+                    "<strong>Kota:</strong> " + kota;
+            } else {
+                alert("Harap isi semua field!");
+            }
+        }
+
+        function resetForm() {
+            document.getElementById("nim").value = "";
+            document.getElementById("nama").value = "";
+            document.getElementById("alamat").value = "";
+            document.getElementById("kota").value = "";
+            document.getElementById("result").innerHTML = "";
+        }
+
+        function addMember() {
+            var table = document.getElementById("memberTable");
+            var nama = document.getElementById("memberNama").value.trim();
+            var gender = document.getElementById("jenis_kelamin").value;
+
+            if (!nama) {
+                alert("Nama tidak boleh kosong!");
+                return;
+            }
+
+            var rowCount = table.rows.length;
+            var row = table.insertRow(rowCount);
+            row.insertCell(0).innerHTML = rowCount - 1;
+            row.insertCell(1).innerHTML = gender === "L" ? "✔" : "";
+            row.insertCell(2).innerHTML = gender === "P" ? "✔" : "";
+            row.insertCell(3).innerHTML = nama;
+        }
+
+        function resetTable() {
+            var table = document.getElementById("memberTable");
+            while (table.rows.length > 2) {
+                table.deleteRow(2);
+            }
+        }
+    </script>
+</body>
+</html>
 
