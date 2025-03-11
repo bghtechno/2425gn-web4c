@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Data - Galaxy Theme</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: url('https://source.unsplash.com/1600x900/?galaxy,stars') no-repeat center center fixed;
+            background-size: cover;
+            padding: 20px;
+            color: white;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.3);
+            display: inline-block;
+            width: 50%;
+            max-width: 600px;
+            color: white;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #FFD700;
+            text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
+        }
+        form {
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea, select {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #555;
+            border-radius: 6px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #FFD700;
+            box-shadow: 0px 0px 5px rgba(255, 215, 0, 0.8);
+        }
+        input[type="submit"] {
+            background: linear-gradient(45deg, #007BFF, #4B0082);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+            box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5);
+        }
+        input[type="submit"]:hover {
+            background: linear-gradient(45deg, #0056b3, #8A2BE2);
+            box-shadow: 0px 0px 15px rgba(138, 43, 226, 0.7);
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 8px;
+            overflow: hidden;
+            color: white;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #555;
+            text-align: left;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #28a745, #006400);
+            color: white;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        a:hover {
+            background: linear-gradient(45deg, #218838, #004d00);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Form Input Data</h2>
+        <form id="dataForm">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" required>
+
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" required></textarea>
+
+            <label for="kota">Kota:</label>
+            <select id="kota" required>
+                <option value="Bangkalan">Bangkalan</option>
+                <option value="Jakarta">Jakarta</option>
+                <option value="Bandung">Bandung</option>
+                <option value="Surabaya">Surabaya</option>
+            </select>
+
+            <input type="submit" value="Kirimkan Data">
+        </form>
+
+        <h2>Hasil Data yang Sudah Dimasukkan:</h2>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Kota</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <a href="latihan1.html">Kembali ke Halaman Utama</a>
+    </div>
+
+    <script>
+        document.getElementById("dataForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            var nama = document.getElementById("nama").value;
+            var alamat = document.getElementById("alamat").value;
+            var kota = document.getElementById("kota").value;
+            
+            var table = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
+            var newRow = table.insertRow();
+
+            newRow.innerHTML = `<td>${nama}</td><td>${alamat}</td><td>${kota}</td>`;
+
+            document.getElementById("dataForm").reset();
+        });
+    </script>
+</body>
+</html>
