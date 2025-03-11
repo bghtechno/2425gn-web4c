@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Mahasiswa</title>
+    <style>
+        /* Mengatur tampilan dasar halaman */
+        body {
+            font-family: Mons, sans-serif; /* Font untuk seluruh halaman */
+            background-color: #f4f4f4; /* Warna latar belakang */
+            text-align: center; /* Posisi teks rata tengah */
+        }
+
+        /* Mengatur tampilan tabel */
+        table {
+            width: 70%; /* Lebar tabel */
+            margin: 20px auto; /* Posisi tabel berada di tengah */
+            border-collapse: collapse; /* Menggabungkan border sel tabel */
+            background: white; /* Warna latar belakang tabel */
+        }
+
+        /* Mengatur tampilan header (th) dan sel (td) tabel */
+        th, td {
+            padding: 8px; /* Memberi ruang di dalam sel */
+            border: 2px solid #333; /* Border tabel */
+            text-align: center; /* Teks berada di tengah */
+        }
+
+        /* Mengatur warna latar belakang untuk header tabel */
+        th {
+            background-color: #b44040; /* Warna latar belakang merah */
+            color: white; /* Warna teks putih */
+        }
+
+        /* Mengatur warna baris genap dalam tabel */
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Warna latar belakang abu-abu muda */
+        }
+
+        /* Mengatur tampilan heading (judul) */
+        h2 {
+            color: #333; /* Warna teks abu-abu tua */
+        }
+
+        /* Mengatur tampilan form input */
+        form {
+            background: white; /* Latar belakang putih */
+            width: 40%; /* Lebar form */
+            margin: 20px auto; /* Posisi form di tengah */
+            padding: 15px; /* Ruang dalam form */
+            border-radius: 8px; /* Membulatkan sudut form */
+            box-shadow: 0px 0px 8px rgba(0,0,0,0.1); /* Efek bayangan */
+            text-align: left; /* Posisi teks kiri */
+        }
+
+        /* Mengatur tampilan setiap grup input */
+        .form-group {
+            display: flex; /* Menata label dan input dalam satu baris */
+            align-items: center; /* Posisi sejajar */
+            margin-bottom: 10px; /* Jarak antar grup input */
+        }
+
+        /* Mengatur tampilan label input */
+        .form-group label {
+            width: 30%; /* Lebar label */
+            font-size: 14px; /* Ukuran font */
+        }
+
+        /* Mengatur tampilan input */
+        .form-group input {
+            width: 65%; /* Lebar input */
+            padding: 6px; /* Ruang dalam input */
+            border: 1px solid #ccc; /* Border input */
+            border-radius: 4px; /* Membulatkan sudut input */
+            font-size: 14px; /* Ukuran font */
+        }
+
+        /* Mengatur tampilan tombol submit */
+        button {
+            background-color: #b44040; /* Warna merah */
+            color: white; /* Warna teks putih */
+            padding: 8px 12px; /* Ukuran padding */
+            border: none; /* Tanpa border */
+            cursor: pointer; /* Kursor berubah saat hover */
+            border-radius: 4px; /* Membulatkan sudut tombol */
+            font-size: 14px; /* Ukuran font */
+            width: 100%; /* Lebar tombol 100% */
+        }
+
+        /* Mengatur efek hover pada tombol */
+        button:hover {
+            background-color: #b44040; /* Warna tetap merah */
+        }
+    </style>
+</head>
+<body>
+    <!-- Judul halaman -->
+    <h2>HALAMAN INPUT DATA & TABEL DATA MAHASISWA</h2>
+
+    <!-- Form untuk memasukkan data mahasiswa -->
+    <h2>INPUT DATA MAHASISWA</h2>
+    <form>
+        <!-- Input Nama Mahasiswa -->
+        <div class="form-group">
+            <label>Nama</label>
+            <input type="text" name="nama" required>
+        </div>
+        
+        <!-- Input NIM -->
+        <div class="form-group">
+            <label>NIM</label>
+            <input type="text" name="nim" required>
+        </div>
+
+        <!-- Input Program Studi -->
+        <div class="form-group">
+            <label>Program Studi</label>
+            <input type="text" name="prodi" required>
+        </div>
+
+        <!-- Input Fakultas -->
+        <div class="form-group">
+            <label>Fakultas</label>
+            <input type="text" name="fakultas" required>
+        </div>
+
+        <!-- Input Angkatan -->
+        <div class="form-group">
+            <label>Angkatan</label>
+            <input type="number" name="angkatan" required>
+        </div>
+
+        <!-- Tombol submit -->
+        <button type="submit">Masukkan Data Mahasiswa</button>
+    </form>
+
+    <!-- Tabel untuk menampilkan data mahasiswa -->
+    <table border="1">
+        <!-- Judul tabel -->
+        <caption><h2><b>DATA MAHASISWA UNIVERSITAS TRUNOJOYO MADURA</b></h2></caption>
+        
+        <!-- Header tabel -->
+        <thead>
+            <tr>
+                <th>NO</th>
+                <th>NAMA</th>
+                <th>NIM</th>
+                <th>PROGRAM STUDI</th>
+                <th>FAKULTAS</th>
+                <th>ANGKATAN</th>
+            </tr>
+        </thead>
+        
+        <!-- Data mahasiswa (contoh) -->
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Eliza Kurnia</td>
+                <td>230631100035</td>
+                <td>Ilmu Komunikasi</td>
+                <td>Fakultas Ilmu Sosial & Ilmu Budaya</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ainul Yaqin</td>
+                <td>230631100096</td>
+                <td>Pendidikan Informatika</td>
+                <td>Fakultas Keguruan & Ilmu Pendidikan</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Moh. Javier Nindis</td>
+                <td>230631100011</td>
+                <td>Teknik Informatika</td>
+                <td>Fakultas Teknik</td>
+                <td>2024</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
