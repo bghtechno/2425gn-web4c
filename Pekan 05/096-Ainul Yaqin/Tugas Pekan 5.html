@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBSITE PORTOFOLIO ME</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #c5c5c5;
+            text-align: center;
+            padding: 55px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+        .header {
+            background: #39526b;
+            color: white;
+            padding: 30px;
+        }
+        .header h1 {
+            margin-bottom: 10px;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: translateY(10-px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .card p, 
+        .card ul {
+        text-align: justify;
+        }
+        .footer {
+            margin-top: 20px;
+            background: #39526b;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>WEBSITE PORTOFOLIO ME</h1>
+            <p>AINUL YAQIN | DESAIN GRAFIS</p>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Tentang Aku</h3>
+                <p>Aku adalah seorang Desainer Grafis dan Mahasisea Semester 4 di Universitas Trunojoyo Madura, Program Studi Pendidikan Informatika. Aku memiliki motivasi kuat untuk terus mengasah keterampilan dan berkembang dibidang desain grafis dengan dedikasi dan kreativitas</p>
+            </div>
+            <div class="card">
+                <h3>Software Skills</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li>Adobe Photoshop - Adobe Illustrator</li>
+                    <li>Adobe After Effect - Corel Draw</li>
+                    <li>Canva - Capcut - Word</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Pengalaman Kerja & Organisasi</h3>
+                <p>Berikut pengalaman kerja dan organisasi :</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li>1. Magang JawaPos TV</li>
+                    <li>2. OSIS SMK Negeri 1 Kamal</li>
+                    <li>3. Himpunan Program Studi/li>
+                    <li>4. Pantia Winamp XII</li>
+                    <li>5. Coordinator LFP 2024</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <p>📩 Kontak : ainulyaqinofficial@gmail.com | 🔗 LinkedIn: linkedin.com/in/ainulyaqin</p>
+        </div>
+    </div>
+</body>
+</html>
 
