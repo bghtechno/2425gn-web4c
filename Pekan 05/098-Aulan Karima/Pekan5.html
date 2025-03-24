@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout dengan Box Model</title>
+    <style>
+      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: #3498db;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 4px solid #2980b9;
+        }
+
+        nav {
+            background: #2c3e50;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        main {
+            display: flex;
+            max-width: 900px;
+            margin: 20px auto;
+            gap: 20px;
+        }
+
+        .hallo {
+            flex: 2;
+            background: #ecf0f1;
+            padding: 20px;
+            border: 2px solid #bdc3c7;
+            margin: 10px;
+        }
+
+        .Me {
+            flex: 1;
+            background: #f1c40f;
+            padding: 20px;
+            border: 2px solid #f39c12;
+            margin: 10px;
+        }
+      
+        footer {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            border-top: 4px solid #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Website Aulan Karima</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Tentang</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hallo">
+            <h2>Hallo guys!</h2>
+            <p>WELCOME TO MY WEBSITE</p>
+        </section>
+
+        <aside class="Me">
+            <h2>My Self</h2>
+            <p>Namaku Aulan karima, Salam kenal!</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy;See you!</p>
+    </footer>
+
+</body>
+          </html>
