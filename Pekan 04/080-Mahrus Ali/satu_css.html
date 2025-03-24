@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Mahrus Ali</title>
+    <link rel="stylesheet" href="syle.css">
+    </style>
+</head>
+
+<body>
+    <h1>Selamat Datang di Website Mahrus Ali</h1>
+    <a href="latihan3.html">Buka Latihan 1</a>
+    <a href="latihan2.html">Buka Latihan 2</a>
+    <a href="latihan4.html">Buka Latihan 3</a>
+    <a href="latihan5.html">Buka Latihan 4</a>
+    <h2>Silahkan Masukan Data Diri Anda</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Kota</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="dataTableBody">
+            <tr>
+                <td colspan="4">
+                    <form id="dataForm">
+                        <input type="text" id="nama" placeholder="Nama" required>
+                        <textarea id="alamat" placeholder="Alamat" required></textarea>
+                        <select id="kota" required>
+                            <option value="">Pilih Kota</option>
+                            <option value="Pamekasan">Pamekasan</option>
+                            <option value="Sampang">Sampang</option>
+                            <option value="Bangkalan">Bangkalan</option>
+                        </select>
+                        <br>
+                        <input type="submit" value="Kirimkan Data">
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Klik di bawah ini untuk berpindah ke halaman utama :</p>
+    <a href="latihan1.html">kembali ke tampilan awal</a>
+
+    <script>
+        document.getElementById("dataForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var nama = document.getElementById("nama").value;
+            var alamat = document.getElementById("alamat").value;
+            var kota = document.getElementById("kota").value;
+
+            var tableBody = document.getElementById("dataTableBody");
+            var newRow = tableBody.insertRow(-1);
+
+            newRow.innerHTML = `
+                <td>${nama}</td>
+                <td>${alamat}</td>
+                <td>${kota}</td>
+                <td><button onclick="hapusBaris(this)">Hapus</button></td>
+            `;
+
+            document.getElementById("dataForm").reset();
+        });
+
+        function hapusBaris(button) {
+            var row = button.parentElement.parentElement;
+            row.remove();
+        }
+    </script>
+</body>
+
+</html>
