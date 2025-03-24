@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #b22222, #ff6347);
+            color: #ffeb3b;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 28px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        table {
+            width: 70%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            color: black;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        th {
+            background: linear-gradient(135deg, #4caf50, #2e7d32);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+            transition: 0.3s;
+        }
+
+        .form-container {
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            color: black;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        #submit {
+            background: linear-gradient(135deg, #ffeb3b, #fdd835);
+            color: #4caf50;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            padding: 12px;
+            transition: background 0.3s;
+        }
+
+        #submit:hover {
+            background: linear-gradient(135deg, #fdd835, #ffeb3b);
+            transform: scale(1.05);
+        }
+
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #4caf50;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            let name = document.getElementById('nama').value;
+            let gender = document.getElementById('pilih').value;
+            let address = document.getElementById('alamat').value;
+            
+            if(name === '' || address === '') {
+                alert('Nama dan Alamat tidak boleh kosong!');
+                return;
+            }
+            
+            let table = document.querySelector('table');
+            let rowCount = table.rows.length;
+            let newRow = table.insertRow(rowCount);
+            
+            let cell1 = newRow.insertCell(0);
+            let cell2 = newRow.insertCell(1);
+            let cell3 = newRow.insertCell(2);
+            let cell4 = newRow.insertCell(3);
+            let cell5 = newRow.insertCell(4);
+            
+            cell1.innerHTML = rowCount - 2;
+            cell2.innerHTML = gender === 'L' ? 'L' : '';
+            cell3.innerHTML = gender === 'P' ? 'P' : '';
+            cell4.innerHTML = name;
+            cell5.innerHTML = address;
+            
+            document.getElementById('nama').value = '';
+            document.getElementById('alamat').value = '';
+            document.getElementById('success-message').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('success-message').style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <h1>TABEL DATA <i>#WEAREMEMBERSHIP</i></h1>
+    <table>
+        <tr>
+            <th rowspan="2">No</th>
+            <th colspan="2">Jenis Kelamin</th> 
+            <th rowspan="2">Nama Lengkap</th>
+            <th rowspan="2">Alamat</th>
+        </tr>
+        <tr>
+            <th>L</th>
+            <th>P</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>L</td>
+            <td></td>
+            <td>Zidqi Imani</td>
+            <td>sumenep</td>
+    
+        </tr>
+    </table>
+    
+    <h1>FORM PENDAFTARAN <i>#WEAREMEMBERSHIP</i></h1>
+    <div class="form-container">    
+        <form onsubmit="submitForm(event)">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" placeholder="Nama Lengkap" id="nama">
+            <br>
+            <label for="jenis_kelamin">Jenis Kelamin:</label>
+            <select name="jenis_kelamin" id="pilih">
+                <option>L</option>
+                <option>P</option>
+            </select>
+            <br>
+            <label for="alamat">Alamat:</label>
+            <input type="text" placeholder="Alamat" id="alamat">
+            <br>
+            <input type="submit" value="Kirimkan Data" id="submit">
+        </form>
+        <div id="success-message" class="success-message">Data berhasil dikirim!</div>
+    </div>
+</body>
+</html>
