@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Orang</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(11, 9, 80);
+            color: rgb(98, 255, 36);
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 15px;
+            text-align: center;
+            border: 2px solid rgb(98, 255, 36);
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(98, 255, 36, 0.2);
+        }
+
+        .mantap {
+            max-width: fit-content;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #nama {
+            width: calc(100% - 22px);
+            height: 30px;
+            margin-bottom: 10px;
+        }
+
+        #submit {
+            color: rgb(62, 186, 13);
+            background-color: rgb(98, 255, 36);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #submit:hover {
+            background-color: rgb(62, 186, 13);
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">TABEL DATA <i>#WEAREMEMBERSHIP</i></h1>
+    <table id="dataTable">
+        <tr style="background-color: rgb(98, 255, 36); color: rgb(11, 9, 80)">
+            <td rowspan="2"><b>No</b></td>
+            <td colspan="2"><b>Jenis Kelamin</b></td> 
+            <td rowspan="2"><b>Nama Lengkap</b></td>
+        </tr>
+        <tr style="background-color: rgb(98, 255, 36); color: rgb(11, 9, 80);" >
+            <td>L</td>
+            <td>P</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>L</td>
+            <td></td>
+            <td>Afif Makki</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td></td>
+            <td>P</td>
+            <td>Siti Lutfia Wardani</td>
+        </tr>
+    </table>
+
+    <h1 align="center">FORM PENDAFTARAN <i>#WEAREMEMBERSHIP</i></h1>
+    <div class="mantap">    
+        <form id="formPendaftaran">
+            <label for="nama">Nama Lengkap&nbsp;:</label><br>
+            <input type="text" placeholder="Nama Lengkap" id="nama" required><br>
+
+            <label for="jenis_kelamin">Jenis Kelamin&nbsp;:</label><br>
+            <select name="jenis_kelamin" id="jenis_kelamin" required>
+                <option value="L">L</option>
+                <option value="P">P</option>
+            </select><br>
+
+            <input type="submit" value="Kirimkan Data" id="submit">
+        </form>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mengambil elemen-elemen penting
+        const form = document.getElementById('formPendaftaran');
+        const namaInput = document.getElementById('nama');
+        const jenisKelaminSelect = document.getElementById('jenis_kelamin');
+        const dataTable = document.getElementById('dataTable');
+
+        // Menambahkan event listener untuk form submit
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah reload halaman
+
+            // Mengambil nilai dari input
+            const namaLengkap = namaInput.value.trim();
+            const jenisKelamin = jenisKelaminSelect.value;
+
+            if (namaLengkap === '') {
+                alert('Nama lengkap tidak boleh kosong!');
+                return;
+            }
+
+            // Menentukan nomor urut berdasarkan jumlah baris di tabel
+            const rowCount = dataTable.rows.length - 2; // Mengurangi header tabel
+            const newRowNumber = rowCount + 1;
+
+            // Membuat baris baru di tabel
+            const newRow = dataTable.insertRow();
+            
+            // Menambahkan sel ke baris baru
+            const cellNo = newRow.insertCell(0);
+            const cellJenisKelaminL = newRow.insertCell(1);
+            const cellJenisKelaminP = newRow.insertCell(2);
+            const cellNamaLengkap = newRow.insertCell(3);
+
+            // Mengisi data ke sel
+            cellNo.textContent = newRowNumber;
+
+            if (jenisKelamin === 'L') {
+                cellJenisKelaminL.textContent = 'L';
+                cellJenisKelaminP.textContent = '';
+            } else {
+                cellJenisKelaminL.textContent = '';
+                cellJenisKelaminP.textContent = 'P';
+            }
+
+            cellNamaLengkap.textContent = namaLengkap;
+
+            // Mengosongkan input setelah submit
+            namaInput.value = '';
+        });
+    </script>
+</body>
+</html>
