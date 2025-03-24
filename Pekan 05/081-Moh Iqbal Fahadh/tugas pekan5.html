@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Ball</title>
+    <style>
+        /* Styling untuk seluruh halaman */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+
+        /* Container utama */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Form styling */
+        #formSection {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            border: 2px solid #28a745;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background: #218838;
+        }
+
+        /* Tabel styling */
+        #dataSection {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            border: 2px solid #530ceb;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #530ceb;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        /* Placeholder styling */
+        .placeholder {
+            text-align: center;
+            font-style: italic;
+            color: gray;
+        }
+
+        /* Pesan error */
+        .error {
+            color: red;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Selamat Datang di Website Ball</h1>
+
+    <div class="container">
+        <div id="formSection">
+            <h2>Form Input Data</h2>
+            <form id="dataForm">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" required>
+                <span class="error" id="errorNama"></span>
+
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" required></textarea>
+                <span class="error" id="errorAlamat"></span>
+
+                <label for="kota">Kota:</label>
+                <select id="kota" required>
+                    <option value="">-- Pilih Kota --</option>
+                    <option value="Bangkalan">Bangkalan</option>
+                    <option value="Pamekasan">Pamekasan</option>
+                    <option value="Sampang">Sampang</option>
+                    <option value="Sumenep">Sumenep</option>
+                </select>
+                <span class="error" id="errorKota"></span>
+
+                <input type="submit" value="Kirimkan Data">
+            </form>
+        </div>
+
+        <div id="dataSection">
+            <h2>Hasil Data yang Sudah Dimasukkan:</h2>
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Alamat</th>
+                        <th>Kota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="placeholderRow">
+                        <td colspan="3" class="placeholder">Belum ada data</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("dataForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var nama = document.getElementById("nama").value.trim();
+            var alamat = document.getElementById("alamat").value.trim();
+            var kota = document.getElementById("kota").value;
+            var isValid = true;
+
+            document.getElementById("errorNama").textContent = "";
+            document.getElementById("errorAlamat").textContent = "";
+            document.getElementById("errorKota").textContent = "";
+
+            if (nama === "") {
+                document.getElementById("errorNama").textContent = "Nama harus diisi.";
+                isValid = false;
+            }
+            if (alamat === "") {
+                document.getElementById("errorAlamat").textContent = "Alamat harus diisi.";
+                isValid = false;
+            }
+            if (kota === "") {
+                document.getElementById("errorKota").textContent = "Silakan pilih kota.";
+                isValid = false;
+            }
+
+            if (!isValid) return;
+
+            var table = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
+            var placeholderRow = document.getElementById("placeholderRow");
+
+            if (placeholderRow) {
+                placeholderRow.remove();
+            }
+
+            var newRow = table.insertRow();
+            newRow.insertCell(0).innerHTML = nama;
+            newRow.insertCell(1).innerHTML = alamat;
+            newRow.insertCell(2).innerHTML = kota;
+
+            document.getElementById("dataForm").reset();
+        });
+    </script>
+
+</body>
+</html>
+
