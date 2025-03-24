@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Styled Table and Form</title>
     <style>
         /* Box Model Basics */
         * {
-            box-sizing: border-box; /* Ensures padding and border are included in the element's total width/height */
+            box-sizing: border-box;
         }
 
         body {
@@ -16,125 +16,102 @@
             background-color: rgb(11, 9, 80);
             color: rgb(98, 255, 36);
             font-family: Arial, sans-serif;
+            text-align: center;
         }
 
         h1 {
             margin-top: 20px;
-            color: rgb(98, 255, 36);
         }
 
         /* Table Styling */
         table {
             width: 60%;
             margin: 20px auto;
-            border-collapse: collapse; /* Ensures borders are collapsed into a single line */
+            border-collapse: collapse;
         }
 
-        td {
+        td, th {
             padding: 10px;
             text-align: center;
-            border: 2px solid rgb(98, 255, 36); /* Added a border for the table cells */
+            border: 2px solid rgb(98, 255, 36);
         }
 
         /* Styling table headers */
-        tr:nth-child(1), tr:nth-child(2) {
+        thead {
             background-color: rgb(98, 255, 36);
             color: rgb(11, 9, 80);
         }
 
-        /* Centering form and adding margin */
+        /* Form Styling */
         .mantap {
             width: 50%;
             margin: 20px auto;
             padding: 20px;
-            background-color: rgb(11, 9, 80);
-            border: 1px solid rgb(98, 255, 36);
-            border-radius: 10px; /* Adding rounded corners */
+            background-color: rgb(20, 18, 100);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         }
 
-        label {
-            margin-bottom: 10px;
-            display: inline-block;
-        }
-
-        input[type="text"] {
-            padding: 10px;
+        input, button {
             width: 100%;
-            margin-bottom: 10px;
-            border: 1px solid rgb(98, 255, 36);
-            background-color: rgb(11, 9, 80);
-            color: rgb(98, 255, 36);
-            border-radius: 5px; /* Rounded corners for the input */
-        }
-
-        select {
             padding: 10px;
-            width: 100%;
-            margin-bottom: 10px;
-            border: 1px solid rgb(98, 255, 36);
-            background-color: rgb(11, 9, 80);
-            color: rgb(98, 255, 36);
-            border-radius: 5px; /* Rounded corners for the select box */
-        }
-
-        /* Submit button styling */
-        #submit {
-            padding: 10px 20px;
-            background-color: rgb(98, 255, 36);
-            color: rgb(11, 9, 80);
+            margin-top: 10px;
             border: none;
             border-radius: 5px;
+        }
+
+        input {
+            background-color: rgb(255, 255, 255);
+            color: rgb(11, 9, 80);
+        }
+
+        button {
+            background-color: rgb(98, 255, 36);
+            color: rgb(11, 9, 80);
             cursor: pointer;
-            font-size: 16px;
-            width: 100%;
         }
 
-        #submit:hover {
-            background-color: rgb(62, 186, 13); /* Slight color change on hover */
+        button:hover {
+            background-color: rgb(80, 200, 30);
         }
-
     </style>
+    <script>
+        function addNameToTable(event) {
+            event.preventDefault();
+            let name = document.getElementById("nameInput").value;
+            let origin = document.getElementById("originInput").value;
+            if (name.trim() !== "" && origin.trim() !== "") {
+                let table = document.getElementById("nameTable");
+                let newRow = table.insertRow();
+                let nameCell = newRow.insertCell(0);
+                let originCell = newRow.insertCell(1);
+                nameCell.textContent = name;
+                originCell.textContent = origin;
+                document.getElementById("nameInput").value = "";
+                document.getElementById("originInput").value = "";
+            }
+        }
+    </script>
 </head>
 <body>
-    <div class="bg"></div>
-    <h1 align="center">TABEL DATA <i>#WEAREMEMBERSHIP</i></h1>
-    <table>
-        <tr>
-            <td rowspan="2"><b>No</b></td>
-            <td colspan="2"><b>Jenis Kelamin</b></td> 
-            <td rowspan="2"><b>Nama Lengkap</b></td>
-        </tr>
-        <tr>
-            <td>L</td>
-            <td>P</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>L</td>
-            <td></td>
-            <td>Mohammad Nauval Ramadhani</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td></td>
-            <td>P</td>
-            <td>DEANKT</td>
-        </tr>
+    <h1>Table Example</h1>
+    <table id="nameTable">
+        <thead>
+            <tr>
+                <th>Submitted Names</th>
+                <th>Origin</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
     </table>
 
-    <h1 align="center">FORM PENDAFTARAN <i>#WEAREMEMBERSHIP</i></h1>
-    <div class="mantap">    
-        <form action="">
-            <label for="nama">Nama Lengkap&nbsp;: </label>
-            <input type="text" placeholder="Nama Lengkap" id="nama">
-            <br>
-            <label for="jenis_kelamin">Jenis Kelamin&nbsp;  : </label>
-            <select name="jenis_kelamin" id="pilih">
-                <option>L</option>
-                <option>P</option>
-            </select>
-            <br>
-            <input type="submit" value="Kirimkan Data" id="submit">
+    <div class="mantap">
+        <h2>Form Example</h2>
+        <form onsubmit="addNameToTable(event)">
+            <input type="text" id="nameInput" name="name" placeholder="Enter your name" required>
+            <input type="text" id="originInput" name="origin" placeholder="Enter your origin" required>
+            <button type="submit">Submit</button>
         </form>
     </div>
 </body>
