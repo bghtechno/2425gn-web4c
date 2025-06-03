@@ -1,0 +1,107 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: white;
+  color: #2575fc;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e0e0e0;
+}
+
+/* Info Section */
+.info-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.image-showcase {
+  padding: 50px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.image-showcase h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.img-card {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.img-card img {
+  display: block;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.img-card:hover {
+  transform: scale(1.05);
+}
+
