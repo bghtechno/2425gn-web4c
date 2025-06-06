@@ -1,1 +1,62 @@
+<?php
 
+// ==============================================
+// 1. PHP SYNTAX
+// ==============================================
+
+echo "<h1>Belajar Dasar PHP</h1>";
+echo "<p>PHP Syntax adalah cara kita menulis perintah dalam bahasa PHP.</p>";
+echo "<p>Skrip PHP dieksekusi di server, dan hasil HTML biasa dikirim kembali ke browser.</p>";
+
+// ==============================================
+// 2. PHP COMMENTS
+// ==============================================
+
+echo "<h2>PHP Comments</h2>";
+echo "<ul>
+    <li>// Komentar satu baris</li>
+    <li># Komentar satu baris (pakai pagar)</li>
+    <li>/* Komentar multi-baris */</li>
+</ul>";
+
+// VARIABLES
+$nama = "Riyan Syah Fachlevi";
+$nim = " 230631100087";
+$kelas = " 4C";
+
+echo "<h2>Contoh Variabel</h2>";
+echo "<ul>
+    <li>Nama: $nama</li>
+    <li>NIM: $nim</li>
+    <li>Kelas: $kelas</li>
+</ul>";
+
+// ECHO & PRINT
+echo "<h2>Contoh echo dan print</h2>";
+echo "<ul>
+    <li>" . "Halo, ini dicetak dengan <strong>echo</strong>.</li>";
+print "<li>Halo, ini dicetak dengan <strong>print</strong>.</li>";
+$kalimat = "Saya sedang belajar PHP.";
+echo "<li>$kalimat (dengan echo)</li>";
+print "<li>$kalimat (dengan print)</li>";
+echo "</ul>";
+
+// DATA TYPES
+echo "<h2>Contoh Tipe Data</h2>";
+
+$tipe_string = "Halo, word!";
+$tipe_integer = 2025;
+$tipe_float = 5.2398089;
+$tipe_boolean = false;
+$tipe_array = array("HTML", "CSS", "PHP");
+$tipe_null = null;
+
+echo "<ul>";
+echo "<li>String: " . $tipe_string . "</li>";
+echo "<li>Integer: " . $tipe_integer . "</li>";
+echo "<li>Float: " . $tipe_float . "</li>";
+echo "<li>Boolean: " . ($tipe_boolean ? "true" : "false") . "</li>";
+echo "<li>Array: " . implode(", ", $tipe_array) . "</li>";
+echo "<li>Null: " . (is_null($tipe_null) ? "NULL" : $tipe_null) . "</li>";
+echo "</ul>";
+?>
